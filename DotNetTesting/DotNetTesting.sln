@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrmApp", "CrmApp\CrmApp.csproj", "{899C3DEC-0892-4289-99AD-AE9CC7022D5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrmApp.Tests", "CrmApp.Tests\CrmApp.Tests.csproj", "{B6BC7EFD-06C8-4639-92A8-0BF5F52F73F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{899C3DEC-0892-4289-99AD-AE9CC7022D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{899C3DEC-0892-4289-99AD-AE9CC7022D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{899C3DEC-0892-4289-99AD-AE9CC7022D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{899C3DEC-0892-4289-99AD-AE9CC7022D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6BC7EFD-06C8-4639-92A8-0BF5F52F73F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6BC7EFD-06C8-4639-92A8-0BF5F52F73F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6BC7EFD-06C8-4639-92A8-0BF5F52F73F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6BC7EFD-06C8-4639-92A8-0BF5F52F73F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
