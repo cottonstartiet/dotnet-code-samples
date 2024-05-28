@@ -2,7 +2,10 @@
 
 using BenchmarkSamples;
 
-BenchmarkRecord benchmarkRecord = new BenchmarkRecord();
+BenchmarkRecord benchmarkRecord = new();
 benchmarkRecord.Run();
+
+BenchmarkLinqFirst benchmarkLinqFirst = new();
+benchmarkLinqFirst.Run();
 
 Console.WriteLine("Hello, World!");
