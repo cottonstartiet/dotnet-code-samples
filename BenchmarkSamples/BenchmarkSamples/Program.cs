@@ -1,11 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using BenchmarkDotNet.Running;
 using BenchmarkSamples;
 
-BenchmarkRecord benchmarkRecord = new();
-benchmarkRecord.Run();
+//BenchmarkRecord benchmarkRecord = new();
+//benchmarkRecord.Run();
 
-BenchmarkLinqFirst benchmarkLinqFirst = new();
-benchmarkLinqFirst.Run();
-
-Console.WriteLine("Hello, World!");
+var summary = BenchmarkRunner.Run<BenchmarkLinqFirst>();
+Console.WriteLine(summary);
