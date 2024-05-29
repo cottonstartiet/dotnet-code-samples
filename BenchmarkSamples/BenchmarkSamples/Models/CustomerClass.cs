@@ -1,6 +1,6 @@
 ﻿namespace BenchmarkSamples.Models
 {
-    internal class CustomerClass
+    public class CustomerClass
     {
         public required string Name { get; set; }
         public int Age { get; set; }

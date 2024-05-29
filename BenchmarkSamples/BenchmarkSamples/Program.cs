@@ -6,5 +6,5 @@ using BenchmarkSamples;
 //BenchmarkRecord benchmarkRecord = new();
 //benchmarkRecord.Run();
 
-var summary = BenchmarkRunner.Run<BenchmarkLinqFirst>();
-Console.WriteLine(summary);
+//BenchmarkRunner.Run<BenchmarkLinqFirst>();
+BenchmarkRunner.Run<BenchmarkRecord>();

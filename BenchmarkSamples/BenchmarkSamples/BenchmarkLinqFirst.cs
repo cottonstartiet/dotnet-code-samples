@@ -3,6 +3,7 @@ using BenchmarkSamples.Models;
 
 namespace BenchmarkSamples
 {
+    [MemoryDiagnoser]
     public class BenchmarkLinqFirst
     {
         private IList<Job> JobsList
