@@ -3,8 +3,7 @@
 using BenchmarkDotNet.Running;
 using BenchmarkSamples;
 
-//BenchmarkRecord benchmarkRecord = new();
-//benchmarkRecord.Run();
-
 //BenchmarkRunner.Run<BenchmarkLinqFirst>();
-BenchmarkRunner.Run<BenchmarkRecord>();
+//BenchmarkRunner.Run<BenchmarkRecord>();
+
+BenchmarkRunner.Run<BenchmarkDictionaries>();
