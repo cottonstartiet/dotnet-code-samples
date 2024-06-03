@@ -4,10 +4,10 @@ using System.Text;
 namespace BenchmarkSamples
 {
     [MemoryDiagnoser]
-    public class StringBuilderVsConcat
+    public class BenchmarkSbVsConcat
     {
         [Benchmark]
-        public void ConcatString()
+        public string ConcatString()
         {
             string value = "val";
             string result = string.Empty;
@@ -16,10 +16,12 @@ namespace BenchmarkSamples
             {
                 result += value;
             }
+
+            return result;
         }
 
         [Benchmark]
-        public void ConcatStringBuilder()
+        public string ConcatStringBuilder()
         {
             string value = "val";
             StringBuilder result = new();
@@ -28,6 +30,8 @@ namespace BenchmarkSamples
             {
                 _ = result.Append(value);
             }
+
+            return result.ToString();
         }
     }
 }

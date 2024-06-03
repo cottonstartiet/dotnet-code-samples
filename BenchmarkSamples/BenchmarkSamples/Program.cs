@@ -3,11 +3,9 @@
 using BenchmarkDotNet.Running;
 using BenchmarkSamples;
 
-//BenchmarkRunner.Run<BenchmarkLinqFirst>();
-//BenchmarkRunner.Run<BenchmarkRecord>();
-//BenchmarkRunner.Run<BenchmarkDictionaries>();
-//BenchmarkRunner.Run<BenchmarkDictionaryGet>();
-//BenchmarkRunner.Run<BenchmarkAllocations>();
+
+BenchmarkRunner.Run<BenchmarkSbVsConcat>();
 //BenchmarkRunner.Run<BenchmarkTwoSum>();
 //BenchmarkRunner.Run<BenchmarkTwoSumLarge>();
-BenchmarkRunner.Run<StringBuilderVsConcat>();
+//BenchmarkRunner.Run<BenchmarkAllocations>();
+

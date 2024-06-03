@@ -1,5 +1,4 @@
 ﻿using BenchmarkDotNet.Attributes;
-using BenchmarkSamples.Models;
 
 namespace BenchmarkSamples
 {
@@ -11,47 +10,25 @@ namespace BenchmarkSamples
         {
             string dobString = "21 01 2020";
 
-            int dobDate = int.Parse(dobString.Substring(0, 2));
-            int dobMonth = int.Parse(dobString.Substring(3, 2));
-            int dobYear = int.Parse(dobString.Substring(6));
-
-            CustomerClass customer = new CustomerClass
+            for (int i = 0; i < 1000; i++)
             {
-                Name = "Name",
-                Age = 30,
-                Address = new AddressClass
-                {
-                    City = "City",
-                    Country = "Country"
-                },
-                DobDate = dobDate,
-                DobMonth = dobMonth,
-                DobYear = dobYear
-            };
+                _ = int.Parse(dobString[..2]);
+                _ = int.Parse(dobString.Substring(3, 2));
+                _ = int.Parse(dobString[6..]);
+            }
         }
 
         [Benchmark]
         public void GetCustomerSpan()
         {
             ReadOnlySpan<char> dobSpan = "21 01 2020";
-            
-            int dobDate = int.Parse(dobSpan.Slice(0, 2));
-            int dobMonth = int.Parse(dobSpan.Slice(3, 2));
-            int dobYear = int.Parse(dobSpan.Slice(6));
 
-            CustomerClass customer = new()
+            for (int i = 0; i < 1000; i++)
             {
-                Name = "Name",
-                Age = 30,
-                Address = new AddressClass
-                {
-                    City = "City",
-                    Country = "Country"
-                },
-                DobDate = dobDate,
-                DobMonth = dobMonth,
-                DobYear = dobYear
-            };
+                _ = int.Parse(dobSpan[..2]);
+                _ = int.Parse(dobSpan.Slice(3, 2));
+                _ = int.Parse(dobSpan[6..]);
+            }
         }
     }
 }
