@@ -5,5 +5,7 @@ using BenchmarkSamples;
 
 //BenchmarkRunner.Run<BenchmarkLinqFirst>();
 //BenchmarkRunner.Run<BenchmarkRecord>();
-
-BenchmarkRunner.Run<BenchmarkDictionaries>();
+//BenchmarkRunner.Run<BenchmarkDictionaries>();
+//BenchmarkRunner.Run<BenchmarkDictionaryGet>();
+//BenchmarkRunner.Run<BenchmarkAllocations>();
+BenchmarkRunner.Run<BenchmarkTwoSum>();
