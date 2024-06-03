@@ -9,3 +9,4 @@ using BenchmarkSamples;
 //BenchmarkRunner.Run<BenchmarkDictionaryGet>();
 //BenchmarkRunner.Run<BenchmarkAllocations>();
 BenchmarkRunner.Run<BenchmarkTwoSum>();
+BenchmarkRunner.Run<BenchmarkTwoSumLarge>();
