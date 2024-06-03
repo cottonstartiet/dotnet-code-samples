@@ -8,5 +8,6 @@ using BenchmarkSamples;
 //BenchmarkRunner.Run<BenchmarkDictionaries>();
 //BenchmarkRunner.Run<BenchmarkDictionaryGet>();
 //BenchmarkRunner.Run<BenchmarkAllocations>();
-BenchmarkRunner.Run<BenchmarkTwoSum>();
-BenchmarkRunner.Run<BenchmarkTwoSumLarge>();
+//BenchmarkRunner.Run<BenchmarkTwoSum>();
+//BenchmarkRunner.Run<BenchmarkTwoSumLarge>();
+BenchmarkRunner.Run<StringBuilderVsConcat>();
