@@ -6,7 +6,7 @@ namespace BenchmarkSamples
     public class BenchmarkAllocations
     {
         [Benchmark]
-        public void GetCustomer()
+        public void GetCustomerDob()
         {
             string dobString = "21 01 2020";
 
@@ -19,7 +19,7 @@ namespace BenchmarkSamples
         }
 
         [Benchmark]
-        public void GetCustomerSpan()
+        public void GetCustomerDobSpan()
         {
             ReadOnlySpan<char> dobSpan = "21 01 2020";
 
