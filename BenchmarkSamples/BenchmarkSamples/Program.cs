@@ -8,5 +8,3 @@ BenchmarkRunner.Run<BenchmarkSbVsConcat>();
 //BenchmarkRunner.Run<BenchmarkTwoSum>();
 //BenchmarkRunner.Run<BenchmarkTwoSumLarge>();
 //BenchmarkRunner.Run<BenchmarkAllocations>();
-
-
