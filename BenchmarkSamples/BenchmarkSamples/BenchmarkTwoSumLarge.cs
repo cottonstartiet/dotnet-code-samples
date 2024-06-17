@@ -5,11 +5,10 @@ namespace BenchmarkSamples
     public class BenchmarkTwoSumLarge
     {
         private readonly int target = 1999;
-        private readonly int[] nums;
+        private readonly int[] nums = new int[1000];
 
         public BenchmarkTwoSumLarge()
         {
-            nums = new int[1000];
             for (int i = 0; i < 1000; i++)
             {
                 nums[i] = i;
