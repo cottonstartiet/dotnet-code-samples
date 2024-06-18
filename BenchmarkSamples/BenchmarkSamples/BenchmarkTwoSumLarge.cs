@@ -4,7 +4,7 @@ namespace BenchmarkSamples
 {
     public class BenchmarkTwoSumLarge
     {
-        private readonly int target = 1999;
+        private const int TARGET = 1999;
         private readonly int[] nums = new int[1000];
 
         public BenchmarkTwoSumLarge()
@@ -22,7 +22,7 @@ namespace BenchmarkSamples
             {
                 for (int j = i + 1; j < nums.Length; j++)
                 {
-                    if (nums[i] + nums[j] == target)
+                    if (nums[i] + nums[j] == TARGET)
                     {
                         return true;
                     }
@@ -37,7 +37,7 @@ namespace BenchmarkSamples
         {
             foreach (int num in nums)
             {
-                if (nums.Contains(target - num))
+                if (nums.Contains(TARGET - num))
                 {
                     return true;
                 }
@@ -52,7 +52,7 @@ namespace BenchmarkSamples
             HashSet<int> set = [];
             foreach (int num in nums)
             {
-                if (set.Contains(target - num))
+                if (set.Contains(TARGET - num))
                 {
                     return true;
                 }
