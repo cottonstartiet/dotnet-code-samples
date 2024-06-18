@@ -6,7 +6,8 @@ namespace BenchmarkSamples
     [MemoryDiagnoser]
     public class BenchmarkSbVsConcat
     {
-        private static readonly int COUNT = 1000; 
+        private static readonly int COUNT = 1000;
+
         [Benchmark]
         public string ConcatString()
         {
@@ -29,7 +30,7 @@ namespace BenchmarkSamples
 
             for (int i = 0; i < COUNT; i++)
             {
-                result.Append(value);
+                _ = result.Append(value);
             }
 
             return result.ToString();

@@ -56,6 +56,8 @@ namespace BenchmarkSamples
                 {
                     return true;
                 }
+
+                _ = set.Add(num);
             }
 
             return false;
