@@ -1,4 +1,4 @@
-﻿namespace FourTierAppSample.Controllers.Dto
+﻿namespace NTierAppSample.Controllers.Dto
 {
     public class UserProfileResponse
     {
