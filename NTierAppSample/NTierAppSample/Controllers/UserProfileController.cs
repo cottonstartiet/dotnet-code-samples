@@ -1,30 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NTierAppSample.Controllers.Dto;
+using UserProfile.Shared.Contract;
+using UserProfileApi.BusinessLogic;
+using UserProfileApi.Mappers;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace NTierAppSample.Controllers
+namespace UserProfileApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class UserProfileController : ControllerBase
     {
-        public class UserProfileController(UserProfileBusinessLogic userProfileBusinessLogic)
+        private readonly UserProfileBusinessLogic userProfileBusinessLogic;
+        public UserProfileController(UserProfileBusinessLogic userProfileBusinessLogic)
         {
-
+            this.userProfileBusinessLogic = userProfileBusinessLogic;
         }
 
         // GET api/<UserProfileController>/5
         [HttpGet("{id}")]
-        public ActionResult<UserProfileResponse> Get(int id)
+        public ActionResult<UserProfileResponse> Get(string userId)
         {
-            return;
-        }
-
-        // POST api/<UserProfileController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
+            Models.UserProfileInfo userProfileInfo = userProfileBusinessLogic.GetUserProfile(userId);
+            return Ok(UserProfileMapper.MapFrom(userProfileInfo));
         }
     }
 }
