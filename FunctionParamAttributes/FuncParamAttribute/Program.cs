@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using FuncParamAttribute;
+
+var attributeUsage = new AttributeUsageClass();
+attributeUsage.CreateCustomer("John Doe");
+attributeUsage.CreateCustomer(null);
+attributeUsage.IsNumberInRange(50);
+attributeUsage.IsNumberInRange(150);

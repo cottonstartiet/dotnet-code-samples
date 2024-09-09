@@ -16,3 +16,12 @@ else
     Console.WriteLine("Customer is null");
 }
 
+if (nullCustomer?.Name == "John Doe")
+{
+    Console.WriteLine();
+}
+else
+{
+    Console.WriteLine("Customer is null");
+}
+
