@@ -1,0 +1,6 @@
+@NTierAppSample_HostAddress = http://localhost:5049
+
+GET {{NTierAppSample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
