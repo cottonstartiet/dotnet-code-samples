@@ -8,9 +8,7 @@ namespace UserProfileApi.Storage
         {
             return new UserProfileDataContract()
             {
-                Id = userId,
-                Name = "John Doe",
-                Email = ""
+                Id = userId
             };
         }
     }
