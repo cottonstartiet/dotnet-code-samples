@@ -1,6 +1,5 @@
 ﻿using CosmosDBSamples.DAL.Models;
 using Microsoft.Azure.Cosmos;
-using System.Threading.Tasks;
 
 namespace CosmosDBSamples
 {
@@ -12,8 +11,8 @@ namespace CosmosDBSamples
         {
             CosmosClient client = new("");
 
-            database = client.CreateDatabaseIfNotExistsAsync("JobDatabase").Result;
-            jobsContainer = database.CreateContainerIfNotExistsAsync("JobContainer", "/pk").Result.Container;
+            database = client.CreateDatabaseIfNotExistsAsync("JobsDatabase").Result;
+            jobsContainer = database.CreateContainerIfNotExistsAsync("JobsContainer", "/pk").Result.Container;
         }
 
         public async Task<ItemResponse<JobInfo>> CreateJob(JobInfo jobInfo)
@@ -29,6 +28,24 @@ namespace CosmosDBSamples
         public Task<ItemResponse<JobStatus>> SetJobStatus(JobStatus jobStatus, string jobId)
         {
             return jobsContainer.UpsertItemAsync(jobStatus, new PartitionKey(jobId));
+        }
+
+        // Inset and item in cosmosdb container where the partition key is the string jobId, Id is the string "LasRunTime" and the value is the current time
+        public Task<ItemResponse<LastRunTimeInfo>> SetLastRunTime(string jobId)
+        {
+            var item = new LastRunTimeInfo
+            {
+                id = "LastRunTime",
+                pk = jobId,
+                Value = DateTime.Now
+            };
+
+            return jobsContainer.UpsertItemAsync(item, new PartitionKey(jobId));
+        }
+
+        public Task<ItemResponse<LastRunTimeInfo>> GetLastRunTime(string jobId)
+        {
+            return jobsContainer.ReadItemAsync<LastRunTimeInfo>("LastRunTime", new PartitionKey(jobId));
         }
 
         public Task<ItemResponse<JobStatus>> GetJobStatus(string jobId)
